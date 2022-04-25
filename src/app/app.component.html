@@ -1,0 +1,85 @@
+<style>
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 10;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.toolbar button{
+  color: black;
+  padding: 20px;
+  margin-left:20%;
+  background-color: orange;
+}
+</style>
+
+<h1>Pel&iacute;culas sobre viajes en el tiempo</h1>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+<!--
+<button (click)="mostrar(opciones.opcion1)">Pel&iacute;cula 1</button>
+<button (click)="mostrar(opciones.opcion2)">Pel&iacute;cula 2</button>
+<button (click)="mostrar(opciones.opcion3)">Pel&iacute;cula 3</button>
+-->
+<!---->
+<miboton1 (click)="mostrar(opciones.opcion1)"></miboton1>
+<miboton2 (click)="mostrar(opciones.opcion2)"></miboton2>
+<miboton3 (click)="mostrar(opciones.opcion3)"></miboton3>
+<div class="spacer"></div>
+</div>
+
+<br /><br /><br />
+<button (click)="mostrar(opciones.inicial)"
+style="background: url(https://image.shutterstock.com/image-vector/cross-sign-element-red-x-260nw-567030823.jpg); no-repeat; background-size:cover; float: right;">_</button>
+<div *ngIf="valorE == opciones.opcion1"><micontenido1></micontenido1></div>
+<div *ngIf="valorE == opciones.opcion2"><micontenido2></micontenido2></div>
+<div *ngIf="valorE == opciones.opcion3"><micontenido3></micontenido3></div>
+<!--<router-outlet></router-outlet>-->
